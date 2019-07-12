@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 // importando lo necesario
 import { HttpClient } from '@angular/common/http';
 import { Task } from './../interfaces/task';
@@ -14,7 +13,7 @@ export class TaskService {
 
     getAllTasks() {
         const path = `${this.API}/todos`;
-        return this.http.get<Task[]>(path);
+        return this.http.get<Task>(path);
     }
 
 

@@ -45,20 +45,23 @@
 <p-table [value]="tabla">
     <ng-template pTemplate="header">
         <tr>
-            <th>Uno</th>
-            <th>Dos</th>
-            <th>Uno</th>
-            <th>Dos</th>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>completed</th>
 
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-tabla>
         <tr>
-            <td>{{tabla.completed}}</td>
-            <td>{{tabla.id}}</td>
-            <td>{{tabla.title}}</td>
 
             <td>{{tabla.userId}}</td>
+            <td>{{tabla.id}}</td>
+            <td>{{tabla.title}}</td>
+            <td>{{tabla.completed}}</td>
+
+
+
 
         </tr>
     </ng-template>
@@ -75,4 +78,48 @@
 
 
 
+<!---->
+<!---->
+<!---->
 
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div class="card no-margin">
+                            <h1>DataTable</h1>
+
+    <p-table [columns]="cols"
+             [value]="cars1"
+             selectionMode="single"
+             dataKey="vin"
+             [(selection)]="selectedCar"
+             [paginator]="true"
+             [rows]="10"
+             [responsive]="true"
+             paginatorPosition="both"
+             [responsive]="true">
+
+        <ng-template pTemplate="caption">
+            Simple tabla
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+                <td *ngFor="let col of columns">
+                    {{rowData[col.field]}}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+        </div>
+    </div>
+    <div class="ui-g-12">
+
+</div>

@@ -15,22 +15,24 @@ export class HomeComponent implements OnInit {
 
     public dato: string;
     public titulo: string;
-    public tabla2: Array<Tabla>;
-    public tabla: Task[];
+    public tabla: Tabla;
 
-  constructor(private taskService: TaskService) {
-      this.dato = 'datos del centro';
+
+    constructor(public taskService: TaskService) {
+      this.dato = 'Datos del centro';
+
   }
 
-  ngOnInit() {
-      this.getAllTasks();
+  ngOnInit()
+  {
+            this.getAllTasks();
   }
     getAllTasks() {
         this.taskService.getAllTasks()
             .subscribe(datos_importados => {
-                this.tabla = datos_importados;
-                 console.log(datos_importados[0].userId);
-                console.log(this.tabla);
+               this.tabla = datos_importados;
+               //  console.log(datos_importados[0].userId);
+                console.log(datos_importados);
             });
     }
 
