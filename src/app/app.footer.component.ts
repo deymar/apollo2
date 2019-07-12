@@ -5,8 +5,8 @@ import {Component} from '@angular/core';
     template: `
       <div class="layout-footer">
         <div class="clearfix">
-          <span class="footer-text-left">PrimeNG Apollo</span>
-          <span class="footer-text-right">All Rights Reserved</span>
+          <span class="footer-text-left">Mitad izquierda</span>
+          <span class="footer-text-right">Mitad derecha (Derechos reservados)</span>
         </div>
       </div>
     `

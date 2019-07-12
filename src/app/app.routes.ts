@@ -14,8 +14,13 @@ import { MiscDemoComponent } from './demo/view/miscdemo.component';
 import { EmptyDemoComponent } from './demo/view/emptydemo.component';
 import { DocumentationComponent } from './demo/view/documentation.component';
 
+// PRIMERA RUTA DE COMPONENTE
+import { HomeComponent } from './component/home/home.component';
+
 export const routes: Routes = [
-    { path: '', component: DashboardDemoComponent },
+  // PRIMERA RUTA DE COMPONENTE
+  //  { path: '', component: DashboardDemoComponent },
+    { path: '', component: HomeComponent },
     { path: 'sample', component: SampleDemoComponent },
     { path: 'forms', component: FormsDemoComponent },
     { path: 'data', component: DataDemoComponent },

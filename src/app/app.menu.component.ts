@@ -19,7 +19,7 @@ export class AppMenuComponent implements OnInit {
 
     ngOnInit() {
         this.model = [
-            { label: 'Dashboard', icon: 'fa fa-fw fa-dashboard', routerLink: ['/'] },
+            { label: 'Primera ruta', icon: 'fa fa-fw fa-dashboard', routerLink: ['/'] },  // primera ruta del dashbboard
             {
                 label: 'Menu', icon: 'fa fa-fw fa-bars',
                 items: [
@@ -30,7 +30,7 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Dark', icon: 'fa fa-fw fa-circle', badge: '8',
+                label: 'Color oscuro', icon: 'fa fa-fw fa-circle', badge: '8',
                 items: [
                     {
                         label: 'Blue', styleClass: 'blue-theme', icon: 'fa fa-fw fa-paint-brush',
@@ -67,7 +67,7 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Light', icon: 'fa fa-fw fa-circle-o', badge: '8',
+                label: 'color claro', icon: 'fa fa-fw fa-circle-o', badge: '8',
                 items: [
                     {
                         label: 'Blue', styleClass: 'blue-theme', icon: 'fa fa-fw fa-paint-brush',
@@ -104,7 +104,7 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Components', icon: 'fa fa-fw fa-sitemap',
+                label: 'Componentes para construir', icon: 'fa fa-fw fa-sitemap',
                 items: [
                     { label: 'Sample Page', icon: 'fa fa-fw fa-columns', routerLink: ['/sample'] },
                     { label: 'Forms', icon: 'fa fa-fw fa-code', routerLink: ['/forms'] },
@@ -133,7 +133,7 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Hierarchy', icon: 'fa fa-fw fa-gg',
+                label: 'Herarquia de menu', icon: 'fa fa-fw fa-gg',
                 items: [
                     {
                         label: 'Submenu 1', icon: 'fa fa-fw fa-sign-in',

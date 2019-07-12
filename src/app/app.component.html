@@ -7,36 +7,41 @@
                  'layout-mobile-active': staticMenuMobileActive,
                  'layout-overlay-active':overlayMenuActive}">
 
-    <app-topbar></app-topbar>
+    <app-topbar></app-topbar>  <!--header principal -->
+
+
     <div class="layout-menu-container" (click)="onMenuClick($event)">
         <p-scrollPanel #layoutMenuScroller [style]="{height: '100%'}">
             <div class="layout-menu-content">
-                <div class="layout-menu-title">MENU</div>
-                <app-menu [reset]="resetMenu"></app-menu>
-                <div class="layout-menu-footer">
-                    <div class="layout-menu-footer-title">TASKS</div>
+                <div class="layout-menu-title">MI MENU</div>
+                <app-menu [reset]="resetMenu"></app-menu>  <!-- componente del menu -->
 
-                    <div class="layout-menu-footer-content">
-                        <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
-                        Today
+                                                        <!--    <div class="layout-menu-footer">-->
+                                                        <!--        <div class="layout-menu-footer-title">TAREAS</div>-->
 
-                        <p-progressBar [value]="80" [showValue]="false"></p-progressBar>
-                        Overall
-                    </div>
-                </div>
+                                                        <!--        <div class="layout-menu-footer-content">-->
+                                                        <!--            <p-progressBar [value]="50" [showValue]="false"></p-progressBar>-->
+                                                        <!--            TAREAS DE HOY-->
+
+                                                        <!--            <p-progressBar [value]="80" [showValue]="true"></p-progressBar>-->
+                                                        <!--            EN GENERAL(GLBAL)-->
+                                                        <!--        </div>-->
+                                                        <!--        -->
+                                                        <!--    </div>-->
             </div>
         </p-scrollPanel>
     </div>
 
-    <div class="layout-content">
 
-        <app-breadcrumb></app-breadcrumb>
+
+
+    <div class="layout-content">
+                            <app-breadcrumb>  </app-breadcrumb>  <!-- header 2 secundario -->
 
         <div class="layout-content-container">
-          <router-outlet></router-outlet>
+          <router-outlet></router-outlet>   <!-- centro donde se cargan todas las rutas -->
         </div>
-
-        <app-footer></app-footer>
+                            <app-footer></app-footer>  <!-- footer -->
         <div class="layout-mask" *ngIf="staticMenuMobileActive"></div>
     </div>
 </div>

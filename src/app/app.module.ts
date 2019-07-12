@@ -97,6 +97,8 @@ import { CountryService } from './demo/service/countryservice';
 import { EventService } from './demo/service/eventservice';
 import { NodeService } from './demo/service/nodeservice';
 import { BreadcrumbService } from './breadcrumb.service';
+import { HomeComponent } from './component/home/home.component';
+
 
 @NgModule({
     imports: [
@@ -191,7 +193,8 @@ import { BreadcrumbService } from './breadcrumb.service';
         FileDemoComponent,
         MiscDemoComponent,
         EmptyDemoComponent,
-        DocumentationComponent
+        DocumentationComponent,
+        HomeComponent
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
