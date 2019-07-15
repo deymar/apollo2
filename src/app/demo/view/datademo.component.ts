@@ -242,7 +242,7 @@ export class DataDemoComponent implements OnInit {
         ];
     }
 
-    loadCarsLazy(event: LazyLoadEvent) {
+    loadCarsLazy(event: LazyLoadEvenzt) {
         if (this.timeout) {
             clearTimeout(this.timeout);
         }
