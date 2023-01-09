@@ -24,7 +24,7 @@
         "@angular/router": "7.1.2",
         "chart.js": "2.7.3",
         "core-js": "2.5.7",
-        "fullcalendar": "4.0.0-alpha.2",
+        "fullcalendar": "6.0.2",
         "intl": "1.2.5",
         "primeng": "7.0.0",
         "quill": "1.1.8",
